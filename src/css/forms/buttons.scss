@@ -1,0 +1,75 @@
+.btn {
+  font-weight: $SEMIBOLD;
+  line-height: 1.3;
+  cursor: pointer;
+  @include fontSize(12px);
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 0;
+  border: 0;
+  
+  @include upTo(xs) {
+    padding: 12px 24px;
+    @include fontSize(16px);
+  }
+
+  &--xl {
+    padding: 15px 27px;
+  }
+
+  &--mobileFull {
+    @include break(xs) {
+      text-align: center;
+      padding: 14px 22px;
+      width: 100%;
+      @include fontSize(14px);
+    }
+  }
+
+  &--primary {
+    color: #ffffff;
+    background-color: $COLOR_CELESTE;
+    text-decoration: none;
+
+  }
+
+  &--secondary {
+    font-weight: $BOLD;
+    color: $COLOR_CELESTE;
+    border: 1px solid $COLOR_CELESTE;
+    
+    text-decoration: none;
+  }
+
+  &--third {
+    @include fontSize(12px);
+    font-weight: $BOLD;
+    line-height: 1;
+    color: $COLOR_CELESTE;
+    background-color: #fff;
+  }
+
+  &--link {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 1rem;
+    }
+
+    span {
+      font-weight: $SEMIBOLD;
+      line-height: 1;
+      text-decoration: underline;
+      @include fontSize(12px);
+
+      @include upTo(xs) {
+        @include fontSize(16px);
+      }
+    }
+
+    &--green {
+      color: $COLOR_VERDE;
+    }
+  }
+}

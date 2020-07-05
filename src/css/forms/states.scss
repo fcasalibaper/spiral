@@ -1,0 +1,50 @@
+form.was-validated {
+  .form-control {
+    &:valid, .is-valid {
+
+      border-bottom-color: $COLOR_VALID_FORM;
+
+      &:focus {
+        box-shadow: 0 0 0 0;
+      }
+
+      // & + label,
+      // & + label + small.small-text {
+      //   color: $COLOR_VALID_FORM;
+      //   display: flex;
+      // }
+    }
+
+    &:invalid, .is-invalid {
+      border-bottom-color: $COLOR_INVALID_FORM;
+
+      &:focus {
+        box-shadow: 0 0 0 0;
+      }
+
+      // & + label,
+      & + label + small.small-text {
+        color: $COLOR_INVALID_FORM;
+        display: flex;
+      }
+    }
+  }
+
+  .form-check-input {
+    // &:invalid, .is-invalid {
+    //   & + label {}
+    // }
+
+    &:valid ~, .is-valid ~ {
+      .form-check-label {
+        color: $COLOR_INPUT;
+      }
+    }
+  }
+}
+
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+  color: $COLOR_INPUT;
+}
+  
+  

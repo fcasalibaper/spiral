@@ -1,0 +1,399 @@
+// body {
+//   @include break(xs) {
+//     padding-top: $HEIGHT_MENU_MOBILE+20;
+//   }
+// }
+
+header.header {
+  position: fixed;
+  display: flex;
+  transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+  
+  @include upTo(xs) {
+    padding-top: 20px;
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  @include break(xs) {
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    padding-bottom: $HEIGHT_MENU_MOBILE+20;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: $HEIGHT_MENU_MOBILE;
+      top: 0;
+      left: 0;
+      box-shadow: 0 2px 8px 0 #00000014;
+      background-color: #fafafa;
+    }
+  }
+}
+
+.header {
+  
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include break(xs) {
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 279px;
+    position: relative;
+
+    @include break(xs) {
+      top: 30px;
+      max-width: 140px;
+    }
+
+    svg {
+      width: 100%;
+      max-width: 279px;
+      height: auto;
+
+      @include upTo(xs) {
+        max-width: 280px;
+      }
+    }
+  }
+
+  // menu
+  &__menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+
+    @include break(xs) {
+      opacity: 0;
+      justify-content: flex-start;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      background-color: #fff;
+      z-index: 99999999;
+    }
+
+    &__list {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+
+      @include break(xs) {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 6rem 2rem;
+      }
+
+      li {
+        font-weight: $REGULAR;
+        padding: 5px 12px;
+        @include fontSize(14px);
+        cursor: pointer;
+        
+        a {
+          color: #2f281e;
+          text-decoration: none;
+          transition: all $ANIMATION_EASING $ANIMATION_TIMING;
+
+          &:hover,
+          &:focus {
+            color: #4d8dff;
+            text-decoration: none;
+          }
+        }
+
+        @include break(xs) {
+          width: 100%;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding: 1rem 0;
+        }
+      }
+    }
+
+    .btn {
+      display: flex;
+      @include upTo(xs) {
+        margin-left: 3rem;
+      }
+      @include break(xs) {
+        display: none;
+      }
+    }
+  }
+
+  &__login__mobile {
+    position: absolute;
+    top: 28px;
+    right: 27px;
+    @include upTo(xs) {
+      display: none;
+    }
+
+    figure {
+      max-width: 25px;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 12px;
+        height: 19px;
+        right: -15px;   
+        @include bgUri("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' focusable='false' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 448 512' style='enable-background:new 0 0 448 512;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23353B50;%7D%0A%3C/style%3E%3Cpath class='st0' d='M207,381.5L12.7,187.1c-9.4-9.4-9.4-24.6,0-33.9l22.7-22.7c9.4-9.4,24.5-9.4,33.9,0l154.7,154l154.7-154 c9.4-9.3,24.5-9.3,33.9,0l22.7,22.7c9.4,9.4,9.4,24.6,0,33.9L241,381.5C231.6,390.8,216.4,390.8,207,381.5L207,381.5z'/%3E%3C/svg%3E", 8.5px 8.5px, 50% 50%); 
+      }
+    }
+  }
+
+  &__login__desktop {
+    @extend .header__login__mobile;
+    align-items: center;
+    position: relative;
+    top: 0;
+    margin-left: 4rem;
+
+    figure {
+      max-width: 32px;
+      margin-right: 1rem;
+      &:after {
+        display: none;
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      @include fontSize(14px);
+      font-weight: $REGULAR;
+      line-height: 1;
+      color: #808fa3;
+      cursor: pointer;
+
+      &:after {
+        font-size: .3em;
+        @extend .icon;
+        content: $icon-down;
+        margin-left: 1em ;
+      }
+    }
+    @include upTo(xs) {
+      display: flex;
+    }
+
+    // POPOVER 
+    .popOver {
+      overflow: hidden;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      border: 0;
+      background-color: #ffffff;
+      height: 0;
+      max-width: 140px;
+      top:-10px;
+      right: 0;
+      z-index: 99;
+      transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+     
+
+      li {
+        border-bottom: solid 1px #eeeeef;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        a {
+          display: flex;
+          @include fontSize(13px);
+          font-weight: $REGULAR;
+          line-height: 1;
+          color: #808fa3;
+          padding: 1rem .5rem;
+          text-decoration: none;
+
+          &:hover,
+          &:active {
+            color: $COLOR_CELESTE;
+          } 
+        }
+      }
+    }
+  }
+
+  // MOBILE
+  .headerList__mobile {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+    background-color: #fff;
+    top: 0;
+
+    .header__logo {
+      max-width: 170px;
+      top: -15px;
+      position: relative;
+    }
+      
+    &__account {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 18px;
+      
+      $width: 1.4rem;
+      $height: .2rem;
+
+      .close {
+        cursor: pointer;
+        position: relative;
+        z-index: 999999999999999999;
+        margin-left: auto;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+
+        &:before,
+        &:after {
+          content:'';
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          background-color: $COLOR_CELESTE;
+          transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+        }
+
+        &:before {
+          width: $height;
+          height: $width;
+        }
+
+        &:after {
+          width: $width;
+          height: $height;
+        }
+      }
+
+      figure {
+        width: 30px;
+        height: 30px;
+        margin-right: 1rem;
+        
+        svg {
+          fill: #5799eb;
+        }
+      }
+
+      span {
+        @include fontSize(16px);
+        font-weight: $REGULAR;
+        line-height: 1.38;
+        color: #000000;
+      }
+    }
+
+    &__section {
+      li {
+        padding: 10px 0;
+        a {
+          @include fontSize(16px);
+          font-weight: $REGULAR;
+          line-height: 1.38;
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+
+      &--first {}
+      &--secondary {
+        li {
+          a {
+            @include fontSize(14px);
+            color: #787878;
+          }
+        }
+      }
+    }
+
+    .socials {
+      position: relative;
+      margin-top: 1.8rem;
+      .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li a {
+          color: #544837;
+          font-size: 1.8rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .separator {
+    position: relative;
+    width: 100vw;
+    height: 1px;
+    left: -$PADDING_MOBILE;
+    background-color: #eeeeee;
+    margin: 1.2rem 0;
+  }
+}
+
+
+.close {
+  span {
+    $distance : 5px;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #5799eb;
+    transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+    transform-origin: center;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2) {
+      top: $distance;
+    }
+    &:nth-child(3) {
+      top: $distance*2;
+    }
+  }
+}

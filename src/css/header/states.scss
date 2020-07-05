@@ -1,0 +1,71 @@
+body {
+  &.openMenu {
+
+    header.header {
+      position: fixed;
+      z-index: 99;
+      padding-bottom: 0;
+    }
+
+    .headerList__mobile__account.active {
+
+      .close {
+        &:before {
+          top: 2px;
+          transform: rotate(90deg);
+        }
+      }
+
+      & + .dropdown {
+        padding-top: 1rem;
+        height: auto;
+      }
+    }
+
+
+    .menu--hamburger { 
+      left: 82%;
+      z-index: 9999999999;
+      .cont {
+        top: 10px;
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transform: rotate(135deg);
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .headerList__mobile {
+      @include break(xs) {
+        left: 0;
+        opacity: 1;
+        z-index: 999999;
+      }
+    }
+    
+  }
+
+}
+
+.popOver {
+  &.active {
+    top: 40px;
+    height: auto;
+    border: solid 1px #eeeeef;
+    opacity: 1;
+  }
+
+  li {
+    &.active {
+      a {
+        color: $COLOR_CELESTE;
+      }
+    }
+  }
+}

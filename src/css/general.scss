@@ -1,0 +1,49 @@
+.cFull {
+  overflow: hidden;
+
+  @include break(xs) {
+    padding-top: $HEIGHT_MENU_MOBILE;
+  }
+}
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+  
+  @include upTo(xs) {
+    padding: 2rem 0 4rem;
+
+    &--noPadding {
+      padding: 0;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-left: $PADDING_MOBILE;
+  padding-right: $PADDING_MOBILE;
+  flex-direction: column;
+
+  @include upTo(xs) {
+    max-width: $sm;
+    padding-left: $PADDING_SM;
+    padding-right: $PADDING_SM;
+    flex-direction: row;
+  }
+  @include upTo(sm) {
+    max-width: $md;
+  }
+  @include upTo(md) {
+    max-width: $lg;
+  }
+  @include upTo(lg) {
+    max-width: $xl;
+  }
+}

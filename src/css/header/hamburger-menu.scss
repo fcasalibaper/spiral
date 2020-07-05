@@ -1,0 +1,24 @@
+// menu hamburguer
+.menu--hamburger {
+  $size:53px;
+
+  position: absolute;
+  transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+  top: 13%;
+  left: 0%;
+  width: $size*1.1;
+  height: $size;
+  z-index: 5;
+  padding: $PADDING_MOBILE;
+
+  .cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // height: $size;
+    transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+
+    @extend .close;
+  }
+}
