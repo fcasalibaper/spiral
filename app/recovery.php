@@ -32,12 +32,6 @@
               <button href="#" type="submit" class="btn btn--fillled btn--filled--blue" style="max-width:335px">
                 Ingresar
               </button>
-
-              <a href="#" class="btn btn--link  txc">
-                <span>
-                  Olvide mi contraseña
-                </span>
-              </a>
             </form>
           </div>
         </div>
