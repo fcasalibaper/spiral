@@ -34,7 +34,7 @@
         <!-- country selector -->
         <?php include("includes/countrySelector.inc.php"); ?>
 
-        <a href="ingresar.php" class="btn btn--primary btn--ingresar">
+        <a href="login.php" class="btn btn--primary btn--ingresar">
           <span>Ingresar</span>
           <i class="icon icon-login-arrow"></i>
         </a>
@@ -44,7 +44,7 @@
     <!-- / menu - desktop -->
     
     <ul class="header__menu__list__login visible-xs">
-      <a href="ingresar.php" class="btn btn--primary btn--ingresar">
+      <a href="login.php" class="btn btn--primary btn--ingresar">
         <span>Entrar</span>
         <i class="icon icon-login-arrow"></i>
       </a>
@@ -65,7 +65,7 @@
       <ul class="headerList__mobile__section headerList__mobile__section--secondary">
         <li><a href="#">Sobre nosotros</a></li>
         <li><a href="terminos-y-condiciones.php">Términos y Condiciones</a></li>
-        <li><a href="#">Políticas de Privacidad</a></li>
+        <li><a href="politicas-de-privacidad.php">Políticas de Privacidad</a></li>
       </ul>
 
       <div class="separator"></div>

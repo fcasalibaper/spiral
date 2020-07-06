@@ -1,0 +1,264 @@
+.login {
+  background-color: $COLOR_CELESTE;
+  padding-top: 3.333rem;
+  padding-bottom: 3.333rem;
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+
+    @include break(xs) {
+      padding: 0;
+    }
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.75rem;
+
+    @include break(xs) {
+      padding: 0 $PADDING_MOBILE;
+    }
+
+    h3 {
+      @include fontSize(16px);
+      font-weight: $BOLD;
+      line-height: 1;
+      color: #ffffff;
+
+      @include upTo(xs) {
+        @include fontSize(26px);
+      }
+    }
+
+    hgroup {
+      margin-top: 1.583rem;
+      display: flex;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      @include upTo(xs) {
+        flex-direction: row;
+      }
+      p {
+        @include fontSize(14px);
+        font-weight: $REGULAR;
+        line-height: 1;
+        color: #ffffff;
+
+        @include upTo(xs) {
+          @include fontSize(20px);
+        }
+      }
+
+      .countrySelector {
+        margin-top: 2rem;
+        @include upTo(xs) {
+          margin-left: 1.75rem;
+          margin-top: 0;
+        }
+        i,
+        select,
+        select option {
+          color: white
+        }
+
+        select {
+          @include fontSize(14px);
+
+          @include upTo(xs) {
+            @include fontSize(16px);
+          }
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    padding: 3rem $PADDING_MOBILE;
+    
+    @include upTo(xs) {
+      border-radius: 4px;
+      box-shadow: 0 2px 4px 0 #0000002e;
+      padding: 4.583rem;
+    }
+  }
+
+  &__buttons,
+  &__form {
+    position: relative;
+
+    @include upTo(xs) {
+      padding: 4.583rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    padding-left: 0;
+
+    @include break(xs) {
+      order: 1;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 1px #0000002e;
+      background-color: #ffffff;
+      text-decoration: none;
+      transition: $TRANSITION;
+      width: 100%;
+      justify-content: center;
+
+      &:hover,
+      &:focus {
+        box-shadow: 1px 3px 5px 2px #0000002e;
+      }
+
+      &:hover,
+      &:focus,
+      &:visited {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 3rem;
+      }
+      span {
+        @include fontSize(16px);
+        font-weight: $REGULAR;
+        line-height: 1;
+        color: #6d7278;
+        margin-left: 1.3rem;
+      }
+
+    }
+  }
+
+  &__form {
+    width: 100%;
+    padding-right: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: #cdcdcd;
+      left: 0;
+
+      @include break(xs) {
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+      }
+      @include upTo(xs) {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 100%;
+      }
+    }
+
+    .form-row {
+      margin-bottom: 0;
+    }
+
+    form,
+    label,
+    input,
+    button {
+      width: 100%;
+      font-family: $FONT_FAMILY;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      padding-top: 0;
+
+      @include upTo(xs) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    label {
+      font-weight: $BOLD;
+      margin-bottom: 3rem;
+      @include fontSize(16px);
+
+      @include break(xs) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    button {
+      margin-bottom: 0;
+      background-color: #4295d8;
+      border-radius: 1px;
+      font-weight: $REGULAR;
+
+      @include break(xs) {
+        height: 40px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: .5rem;
+      color: $COLOR_BLUE;
+
+      @include break(xs) {
+        margin-top: 1rem;
+      }
+
+      &:hover,
+      &:focus,
+      &:visited {
+        text-decoration: underline;
+        span {
+          color: $COLOR_BLUE;
+        }
+      }
+
+      span {
+        @include fontSize(14px);
+        font-weight: $REGULAR;
+        color: $COLOR_BLUE;
+      }
+    }
+  }
+
+  &__bajada {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    @include fontSize(13px);
+    font-weight: $REGULAR;
+    line-height: 1.4;
+    text-align: center;
+    color: #ffffff;
+
+    @include upTo(xs) {
+      @include fontSize(16px);
+    }
+  }
+}

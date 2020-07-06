@@ -28,25 +28,25 @@
     }
   }
 
-  &--link {
-    display: flex;
-    align-items: center;
+  // &--link {
+  //   display: flex;
+  //   align-items: center;
 
-    span {
-      font-weight: $SEMIBOLD;
-      line-height: 1;
-      text-decoration: underline;
-      @include fontSize(12px);
+  //   span {
+  //     font-weight: $SEMIBOLD;
+  //     line-height: 1;
+  //     text-decoration: underline;
+  //     @include fontSize(12px);
 
-      @include upTo(xs) {
-        @include fontSize(16px);
-      }
-    }
+  //     @include upTo(xs) {
+  //       @include fontSize(16px);
+  //     }
+  //   }
 
-    &--green {
-      color: $COLOR_VERDE;
-    }
-  }
+  //   &--green {
+  //     color: $COLOR_VERDE;
+  //   }
+  // }
 
   &--outlined {
     border: 1px solid $COLOR_VERDE;

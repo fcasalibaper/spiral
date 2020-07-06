@@ -22,7 +22,7 @@
             </small>
 
             <div class="btns">
-              <a href="ingresar.php" class="btn btn--filled btn--filled--blue"><span>Ingresar</span></a>
+              <a href="login.php" class="btn btn--filled btn--filled--blue"><span>Ingresar</span></a>
               <p class="hidden-xs">¡No lo dudes, es gratis!</p>
             </div>
           </hgroup>
@@ -107,7 +107,7 @@
             </ul>
           </div>
           <div class="col-xs-12 col-sm-5 features__img hidden-xs">
-            <?php include("images/home-img.svg"); ?>
+            <img src="images/home-img.png"  />
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@
 
     <section class="section clients">
       <div class="container">
-        <div class="col-xs-12 col-sm-5 clients__text">
+        <div class="col-xs-12 col-sm-6 clients__text">
           <h2>
             Estamos felices de tener la confianza de estos usuarios desde 2018.
           </h2>

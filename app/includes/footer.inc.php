@@ -1,23 +1,22 @@
 <footer class="footer">
-
   <!-- info -->
-  <div class="footer__info">
+  <div class="dudas__info">
 
-    <div class="footer__sides">
-      <div class="footer__sides--left">
+    <div class="dudas__sides">
+      <div class="dudas__sides--left">
         <img src="images/left-morph.png" />
       </div>
-      <div class="footer__sides--right">
+      <div class="dudas__sides--right">
         <img src="images/right-morph.png" />
       </div>
     </div>
 
     <div class="container">
-      <div class="footer__sides footer__sides--container">
-        <div class="footer__sides--left">
+      <div class="dudas__sides dudas__sides--container">
+        <div class="dudas__sides--left">
           <?php include("images/points-01.svg"); ?>
         </div>
-        <div class="footer__sides--right">
+        <div class="dudas__sides--right">
           <?php include("images/points-02.svg"); ?>
         </div>
       </div>
@@ -27,7 +26,7 @@
         <p>Contactános por el medio que prefieras</p>
       </hgroup>
 
-      <div class="footer__info__btns">
+      <div class="dudas__info__btns">
         <a href="#" class="btn btn--primary btn--filled btn--filled--green"><i class="icon icon-whatsapp" ></i> <b>Chateá con nosotros</b></a>
         <a href="#" class="btn btn--outlined btn--outlined--green"><b>info@spiral.com</b></a>
       </div>
@@ -63,10 +62,10 @@
             <a href="#"><span>Funcionalidades</span></a>
           </li>
           <li>
-            <a href="#"><span>Términos y Condiciones</span></a>
+            <a href="terminos-y-condiciones.php"><span>Términos y Condiciones</span></a>
           </li>
           <li>
-            <a href="#"><span>Políticas de Privacidad</span></a>
+            <a href="politicas-de-privacidad.php"><span>Políticas de Privacidad</span></a>
           </li>
         </ul>
       </div>

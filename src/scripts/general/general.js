@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { isMobile, DownTo, UpTo, toolResponsive } from '../utils/utils';
+import { isSafari, isAppleDevice, toolResponsive } from '../utils/utils';
 
 
 export default function General() {
@@ -7,7 +7,6 @@ export default function General() {
         init: () => {
             $(document).ready(function(){
                 spiral.ready();
-                console.log('ready')
                 // toolResponsive();
             }); 
         },
@@ -18,6 +17,22 @@ export default function General() {
             spiral.formValidation.init();
             spiral.openModalIngresar();
             spiral.dropDown();
+            spiral.hideFooterContentOnSection();
+            spiral.checkElement()
+        },
+
+        hideFooterContentOnSection : () => {
+            let location = window.location.pathname;
+
+            if ( location.indexOf('login') > 0 ) {
+                $('.dudas__info').hide();
+            }
+        },
+
+        checkElement : () => {
+            if (isAppleDevice()) {
+                isSafari('.header__menu__list__login');
+            }
         },
 
         // MI CUENTA MENU

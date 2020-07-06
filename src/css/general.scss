@@ -62,20 +62,45 @@
     color: #a2a7ae;
     @include fontSize(20px);
   }
+
+  &:after {
+    font-family: '#{$icomoon-font-family}' !important;
+    content: $icon-chevron-down;
+    color: #0a1036;
+    @include fontSize(5px);
+    margin-left: 1rem;
+  }
+  
   select {
     position: relative;
     margin-left: .5rem;
     border: 0;
     font-family: $FONT_FAMILY;
     font-weight: $REGULAR;
+    background-color: transparent;
+    @include fontSize(14px);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
 
     option {
-      @include fontSize(16px);
+      @include fontSize(14px);
       color: #0a1036;
     }
   }
 }
-
+.countrySelector__wrapper {
+  &--light {
+    .countrySelector {
+      select,
+      select option,
+      &:after {
+        color: white
+      }
+    }
+  }
+}
 .separator {
   height: 1px;
   width: 100%;
@@ -149,9 +174,11 @@
 
     h2 {
       font-weight: $REGULAR;
-      line-height: 1.1;
+      line-height: 1.2;
+      @include fontSize(30px);
       @include upTo(xs) {
         line-height: 1.3;
+        @include fontSize(34px);
       }
     }
     small {
@@ -162,7 +189,7 @@
       color: $COLOR_BLACK;
 
       @include upTo(xs) {
-        @include fontSize(21px);
+        @include fontSize(20px);
       }
 
       span {
@@ -170,34 +197,36 @@
       }
     }
 
-    .btns {
+  }
+  
+  .btns {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    margin-top: 3.4rem;
+    z-index: 1;
+
+    a {
+      width: 100%;
       display: flex;
-      margin-top: 1rem;
       align-items: center;
-      margin-top: 3.4rem;
-      z-index: 1;
-
-      a {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 4px;
-
-        @include break(xs) {
-          height: 50px;
-        }
-
-        @include upTo(xs) {
-          max-width: 16.083rem;
-        }
+      justify-content: center;
+      border-radius: 4px;
+      @include fontSize(14px);
+      
+      @include break(xs) {
+        height: 50px;
       }
-      p {
-        @include fontSize(16px);
-        margin-left: 2rem;
-        line-height: 1.75;
-        color: $COLOR_BLACK;
+
+      @include upTo(xs) {
+        max-width: 16.083rem;
       }
+    }
+    p {
+      @include fontSize(14px);
+      margin-left: 2rem;
+      line-height: 1.75;
+      color: $COLOR_BLACK;
     }
   }
 
@@ -224,8 +253,8 @@
 // info section 
 .info {
   background-color: #f7f7f7;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 
   .container {
     padding: 0;
@@ -238,7 +267,7 @@
   p {
     color: $COLOR_BLACK;
     padding-right: 4rem;
-    @include fontSize(16px);
+    @include fontSize(14px);
     b {
       font-weight: $BOLD;
     }
@@ -252,18 +281,18 @@
   padding-bottom: 4rem;
 
   @include upTo(xs) {
-    padding-top: 6rem;
+    padding-top: 4rem;
     padding-bottom: 2rem;
   }
   
   header {
     h2 {
       color: #333;
-      font-weight: $LIGHT;
+      font-weight: $REGULAR;
       @include fontSize(30px);
       
       @include upTo(xs) {
-        @include fontSize(34px);
+        @include fontSize(30px);
       }
     }
   }
@@ -320,14 +349,14 @@
           padding-right: 2rem;
 
           h4 {
-            @include fontSize(16px);
+            @include fontSize(14px);
             line-height: 1;
             color: $COLOR_BLACK;
             font-weight: $REGULAR;
             margin-bottom: 1rem;
 
             @include upTo(xs) {
-              @include fontSize(18px);
+              @include fontSize(16px);
             }
           }
 
@@ -345,7 +374,7 @@
   &__img {
     position: relative;
     padding-left: 4rem;
-    svg {
+    img {
       position: relative;
       top: -5rem;
       width: 100%;
@@ -358,6 +387,8 @@
 // clients
 .clients {
   background-color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   @include break(xs) {
     padding-top: 3rem;
@@ -378,7 +409,7 @@
       line-height: 1.23;
 
       @include upTo(xs) {
-        @include fontSize(30px);
+        @include fontSize(26px);
       }
     }
   }
@@ -389,11 +420,13 @@
     }
     h4 {
       font-weight: $REGULAR;
-      @include fontSize(18px);
+      @include fontSize(16px);
       color: #7c8087;
     }
     figure {
+      overflow: hidden;
       width: 100%;
+      max-height: 40px;
       display: flex;
       align-items: center;
       margin-top: 1.3rem;
@@ -456,7 +489,7 @@
 
       @include upTo(xs) {
         margin-top: 4.2rem;
-        @include fontSize(36px);
+        @include fontSize(30px);
       }
     }
   }
@@ -490,6 +523,8 @@
     width: 100%;
     margin-right: 3rem;
     padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
 
     @include break(xs) {
       min-width: 25rem;
@@ -519,6 +554,7 @@
       font-weight: $REGULAR;
       color: $COLOR_BLACK;
       margin-bottom: 2rem;
+      flex-grow: 1;
     }
 
     small {
@@ -529,9 +565,250 @@
   }
 }
 
+// dudas
+.dudas {
+  &__info {
+    @extend .section;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: $COLOR_CELESTE;
+    overflow: hidden;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 6rem 0 5rem !important;
+      z-index: 1;
+
+      @include upTo(xs) {
+        padding: 3rem 0 6rem !important;
+      }
+    }
+
+    hgroup {
+      width: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+      
+      h3 {
+        text-align: center;
+        @include fontSize(20px);
+        line-height: 1;
+        text-align: center;
+        color: #ffffff;
+
+        @include upTo(xs) {
+          @include fontSize(30px);
+        }
+      }
+      p {
+        text-align: center;
+        color: white;
+        padding: 2rem 0;
+        @include fontSize(14px);
+        text-align: center;
+        color: #ffffff;
+
+        @include upTo(xs) {
+          @include fontSize(16px);
+        }
+      }
+    }
+
+    &__btns {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @include upTo(xs) {
+        flex-direction: row;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem;
+        width: 90%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 1.65rem;
+        height: 48px;
+        @include fontSize(14px);
+
+        @include upTo(xs) {
+          width: auto;
+          margin-bottom: 0;
+        }
+
+        .icon-whatsapp {
+          font-size: 1.313em;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  // images sides
+  &__sides {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+
+    &--container {
+      z-index: -1;
+      .footer__sides--left,
+      .footer__sides--right {
+        path {
+          fill: white
+        }
+      }
+
+      .footer__sides--left {
+        bottom: 0;
+        width: 11.667rem;
+        @include break(xs) {
+          left: 10%;
+        }
+        @include upTo(xs) {
+          width: 15.667rem;
+        }
+        svg {
+          position: absolute;
+          bottom: 0;
+
+          @include break(xs) {
+            bottom: -10%;
+          }
+        }
+      }
+      .footer__sides--right {
+        top:0;
+        width: 15.667rem;
+
+        @include break(xs) {
+          align-items: flex-start;
+          width: 38%;
+        }
+        svg {
+          position: relative;
+          top: 0;
+
+          @include break(xs) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &--left,
+    &--right {
+      position: absolute;
+      top: 0;
+      height: 100%;
+
+      @include upTo(xs) {
+        width: 166px;
+      }
+    }
+
+    &--left {
+      left: 0;
+      width: 60px;
+      
+      @include upTo(xs) {
+        width: 166px;
+        img {
+          max-width: 40%;
+        }
+      }
+    }
+    &--right {
+      right: 0;
+      width: 100px;
+      text-align: right;
+      
+      @include break(xs) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      img {
+        @include break(xs) {
+          height: 80px;
+        }
+      }
+
+      @include upTo(xs) {
+        width: 216px;
+
+        img {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+.terminos {
+  padding-top: 0;
+  .container {
+    margin: auto;
+  }
+
+  &__title {
+    background-color: #f7f7f7;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 ;
+    
+    @include upTo(xs) {
+      padding: 3rem 0;
+    }
+
+    h3 {
+      color: $COLOR_BLACK;
+      font-weight: $BOLD;
+      @include fontSize(20px);
+      text-align: left;
+      @include upTo(xs) {
+        @include fontSize(26px);
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+    @include upTo(xs) {
+      margin-top: 2.3rem;
+    }
+    p {
+      color: $COLOR_BLACK;
+      font-weight: $REGULAR;
+      @include fontSize(14px);
+
+      strong {
+        font-weight: $REGULAR;
+        @include fontSize(16px);
+      }
+    }
+  }
+}
 
 h2 {
-  @include fontSize(36px);
+  @include fontSize(30px);
   font-weight: $REGULAR;
   
   @include upTo(xs) {

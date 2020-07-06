@@ -2,196 +2,6 @@
   width: 100%;
   padding: 0;
 
-  &__info {
-    @extend .section;
-    position: relative;
-    width: 100%;
-    display: flex;
-    background-color: $COLOR_CELESTE;
-    overflow: hidden;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 6rem 0 5rem !important;
-      z-index: 1;
-
-      @include upTo(xs) {
-        padding: 3rem 0 6rem !important;
-      }
-    }
-
-    hgroup {
-      width: 100%;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 2em;
-      
-      h3 {
-        text-align: center;
-        @include fontSize(20px);
-        line-height: 1;
-        text-align: center;
-        color: #ffffff;
-
-        @include upTo(xs) {
-          @include fontSize(30px);
-        }
-      }
-      p {
-        text-align: center;
-        color: white;
-        padding: 2rem 0;
-        @include fontSize(14px);
-        text-align: center;
-        color: #ffffff;
-
-        @include upTo(xs) {
-          @include fontSize(16px);
-        }
-      }
-    }
-
-    &__btns {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      @include upTo(xs) {
-        flex-direction: row;
-      }
-      a {
-        display: flex;
-        align-items: center;
-        margin: 0 1rem;
-        width: 90%;
-        text-align: center;
-        justify-content: center;
-        margin-bottom: 1.65rem;
-        height: 48px;
-
-        @include upTo(xs) {
-          width: auto;
-          margin-bottom: 0;
-        }
-
-        .icon-whatsapp {
-          font-size: 1.833rem;
-          margin-right: 1rem;
-        }
-      }
-    }
-  }
-
-  // images sides
-  &__sides {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: 0;
-
-    &--container {
-      z-index: -1;
-      .footer__sides--left,
-      .footer__sides--right {
-        path {
-          fill: white
-        }
-      }
-
-      .footer__sides--left {
-        bottom: 0;
-        width: 11.667rem;
-        @include break(xs) {
-          left: 10%;
-        }
-        @include upTo(xs) {
-          width: 15.667rem;
-        }
-        svg {
-          position: absolute;
-          bottom: 0;
-
-          @include break(xs) {
-            bottom: -10%;
-          }
-        }
-      }
-      .footer__sides--right {
-        top:0;
-        width: 15.667rem;
-
-        @include break(xs) {
-          align-items: flex-start;
-          width: 38%;
-        }
-        svg {
-          position: relative;
-          top: 0;
-
-          @include break(xs) {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    &--left,
-    &--right {
-      position: absolute;
-      top: 0;
-      height: 100%;
-
-      @include upTo(xs) {
-        width: 166px;
-      }
-    }
-
-    &--left {
-      left: 0;
-      width: 60px;
-      
-      @include upTo(xs) {
-        width: 166px;
-        img {
-          max-width: 40%;
-        }
-      }
-    }
-    &--right {
-      right: 0;
-      width: 100px;
-      text-align: right;
-      
-      @include break(xs) {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-      }
-
-      img {
-        @include break(xs) {
-          height: 80px;
-        }
-      }
-
-      @include upTo(xs) {
-        width: 216px;
-
-        img {
-          bottom: 0;
-        }
-      }
-    }
-  }
-
   // links
   &__links {
     width: 100%;
@@ -226,14 +36,14 @@
       }
 
       span {
-        @include fontSize(16px);
-        color: #1d293f;
+        @include fontSize(14px);
+        color: $COLOR_BLACK;
         font-weight: $REGULAR;
       }
 
       hgroup {
         h4 {
-          @include fontSize(18px);
+          @include fontSize(16px);
           font-weight: $BOLD;
           color: $COLOR_VERDE;
           text-transform: uppercase;
@@ -268,7 +78,7 @@
             left: 0;
             width: 100%;
             height: 1px;
-            background-color: #1d293f;
+            background-color: $COLOR_BLACK;
             opacity: 0.1;
           }
 
@@ -292,13 +102,13 @@
         }
 
         img {
-          max-width: 147px;
+          max-width: 12.25rem;
           @include break(xs) {
             align-self: center;
             flex: 0 0 auto;
           }
           @include upTo(xs) {
-            max-width: 184px;
+            max-width: 15.333rem;
           }
         }
 
@@ -320,9 +130,9 @@
 
         a {
           text-decoration: none;
-          color: #1d293f;
+          color: $COLOR_BLACK;
           span {
-            color: #1d293f;
+            color: $COLOR_BLACK;
           }
         }
       }
@@ -357,7 +167,7 @@
           left: 0;
           width: 100%;
           height: 1px;
-          background-color: #1d293f;
+          background-color: $COLOR_BLACK;
           opacity: 0.1;
         }
       }
@@ -371,7 +181,7 @@
       text-align: center;
 
       @include upTo(xs) {
-        @include fontSize(16px);
+        @include fontSize(13px);
         text-align: left;
       }
     }
