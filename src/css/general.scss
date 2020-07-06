@@ -665,14 +665,14 @@
 
     &--container {
       z-index: -1;
-      .footer__sides--left,
-      .footer__sides--right {
+      .dudas__sides--left,
+      .dudas__sides--right {
         path {
           fill: white
         }
       }
 
-      .footer__sides--left {
+      .dudas__sides--left {
         bottom: 0;
         width: 11.667rem;
         @include break(xs) {
@@ -690,7 +690,7 @@
           }
         }
       }
-      .footer__sides--right {
+      .dudas__sides--right {
         top:0;
         width: 15.667rem;
 
@@ -784,7 +784,7 @@
       @include fontSize(20px);
       text-align: left;
       @include upTo(xs) {
-        @include fontSize(26px);
+        @include fontSize(24px);
       }
     }
   }
@@ -801,7 +801,7 @@
 
       strong {
         font-weight: $REGULAR;
-        @include fontSize(16px);
+        @include fontSize(18px);
       }
     }
   }
