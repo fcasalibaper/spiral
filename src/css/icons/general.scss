@@ -25,26 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-logo-spiral .path1 {
-  &:before {
-    content: $icon-logo-spiral-path1;  
-    color: rgb(80, 227, 194);
-  }
-}
-.icon-logo-spiral .path2 {
-  &:before {
-    content: $icon-logo-spiral-path2;  
-    margin-left: -2.2001953125em;  
-    color: rgb(80, 227, 194);
-  }
-}
-.icon-logo-spiral .path3 {
-  &:before {
-    content: $icon-logo-spiral-path3;  
-    margin-left: -2.2001953125em;  
-    color: rgb(0, 0, 0);
-  }
-}
 .icon-bar-chart {
   &:before {
     content: $icon-bar-chart; 

@@ -12,7 +12,7 @@ header.header {
   @include upTo(xs) {
     padding-top: 20px;
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 
   @include break(xs) {
@@ -38,35 +38,40 @@ header.header {
 }
 
 .header {
-  
   .container {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    @include upTo(xs) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     @include break(xs) {
       height: 100%;
+      align-items: flex-start;
+      padding-left: 5rem;
     }
   }
 
   &__logo {
     width: 100%;
-    max-width: 279px;
+    max-width: 7.33rem;
     position: relative;
 
     @include break(xs) {
-      top: 30px;
-      max-width: 140px;
+      top: 2rem;
+      max-width: 5.167rem;
     }
 
     svg {
       width: 100%;
-      max-width: 279px;
+      max-width: 23.25rem;
       height: auto;
 
       @include upTo(xs) {
-        max-width: 280px;
+        max-width: 23.333rem;
       }
     }
   }
@@ -76,7 +81,11 @@ header.header {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-left: 5vw;
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
     transition: all $ANIMATION_TIMING $ANIMATION_EASING;
 
     @include break(xs) {
@@ -110,17 +119,17 @@ header.header {
       li {
         font-weight: $REGULAR;
         padding: 5px 12px;
-        @include fontSize(14px);
+        @include fontSize(16px);
         cursor: pointer;
         
         a {
-          color: #2f281e;
+          color: $COLOR_GREY;
           text-decoration: none;
           transition: all $ANIMATION_EASING $ANIMATION_TIMING;
 
           &:hover,
           &:focus {
-            color: #4d8dff;
+            color: $COLOR_CELESTE;
             text-decoration: none;
           }
         }
@@ -132,12 +141,47 @@ header.header {
           padding: 1rem 0;
         }
       }
+
+      &__login {
+        margin-right: 0;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        @include break(xs) {
+          top: -0.7rem;
+          position: relative;
+        }
+
+        a {
+          text-decoration: none;
+          color: $COLOR_GREY;
+          border-radius: 0;
+          padding-right: 0;
+          
+          @include upTo(xs) {
+            border-left: 1px solid #808fa3;
+          }
+        }
+
+        .icon-login-arrow {
+          color: $COLOR_CELESTE;
+          @include fontSize(10px);
+          margin-left: .5rem;
+
+          @include upTo(xs) {
+            @include fontSize(18px);
+            margin-left: 1.7rem;
+          }
+        }
+      }
     }
 
     .btn {
       display: flex;
       @include upTo(xs) {
         margin-left: 3rem;
+        padding: .5rem 0 .5rem 3rem;
       }
       @include break(xs) {
         display: none;
@@ -189,59 +233,18 @@ header.header {
       @include fontSize(14px);
       font-weight: $REGULAR;
       line-height: 1;
-      color: #808fa3;
+      color: $COLOR_GREY;
       cursor: pointer;
 
       &:after {
         font-size: .3em;
         @extend .icon;
-        content: $icon-down;
+        // content: $icon-down;
         margin-left: 1em ;
       }
     }
     @include upTo(xs) {
       display: flex;
-    }
-
-    // POPOVER 
-    .popOver {
-      overflow: hidden;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      opacity: 0;
-      border: 0;
-      background-color: #ffffff;
-      height: 0;
-      max-width: 140px;
-      top:-10px;
-      right: 0;
-      z-index: 99;
-      transition: all $ANIMATION_TIMING $ANIMATION_EASING;
-     
-
-      li {
-        border-bottom: solid 1px #eeeeef;
-
-        &:last-child {
-          border-bottom: 0;
-        }
-
-        a {
-          display: flex;
-          @include fontSize(13px);
-          font-weight: $REGULAR;
-          line-height: 1;
-          color: #808fa3;
-          padding: 1rem .5rem;
-          text-decoration: none;
-
-          &:hover,
-          &:active {
-            color: $COLOR_CELESTE;
-          } 
-        }
-      }
     }
   }
 
@@ -370,7 +373,7 @@ header.header {
     width: 100vw;
     height: 1px;
     left: -$PADDING_MOBILE;
-    background-color: #eeeeee;
+    background-color: rgba(#1d293f, .5);
     margin: 1.2rem 0;
   }
 }

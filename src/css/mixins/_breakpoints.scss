@@ -1,4 +1,4 @@
-$grid-breakpoints : (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1110px);
+$grid-breakpoints : (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1440px);
 
 $xs: map-get($grid-breakpoints, xs);
 $sm: map-get($grid-breakpoints, sm);

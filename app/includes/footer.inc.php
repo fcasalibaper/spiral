@@ -1,70 +1,101 @@
-<footer class="footer section">
-  <div class="container">
-    <a href="/index.php" class="footer__logo">
-      <?php include('images/logo-anticipo.svg'); ?>
-    </a>
-    <!-- / logo -->
-    <div class="footer__linksCont">
-      <div class="footer__linksCont__links hidden-xs">
-        <hgroup class="title">
-          <h4>
-            Sobre Nosotros
-          </h4>
-        </hgroup>
-        <ul class="links">
-          <li><a href="#">Links</a></li>
-          <li><a href="#">Links</a></li>
-          <li><a href="#">Links</a></li>
-        </ul>
-      </div>
-      <!-- links -->
+<footer class="footer">
 
-      <div class="footer__linksCont__links">
-        <hgroup class="title hidden-xs">
-          <h4>
-            Seguinos en
-          </h4>
-        </hgroup>
-        <ul class="links">
-          <li>
-            <a href="#">
-              <i class="icon icon-fb-f"></i>
-              <span class="hidden-inherit-xs">Facebook</span>
-            </a>
-          <li>
-            <a href="#">
-              <i class="icon icon-in"></i> 
-              <span class="hidden-inherit-xs">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="icon icon-fb-m"></i>
-              <span class="hidden-inherit-xs">Chat</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- links -->
+  <!-- info -->
+  <div class="footer__info">
 
-      <div class="footer__linksCont__links hidden-xs">
-        <hgroup class="title">
-          <h4>
-            Legales
-          </h4>
-        </hgroup>
-        <ul class="links">
-          <li><a href="terminos-y-condiciones.php">Términos y Condiciones</a></li>
-          <li><a href="#">Politicas de privacidad</a></li>
-          <li><a href="#"><img src="#" alt="" /></a></li>
-        </ul>
+    <div class="footer__sides">
+      <div class="footer__sides--left">
+        <img src="images/left-morph.png" />
       </div>
-      <!-- links -->
+      <div class="footer__sides--right">
+        <img src="images/right-morph.png" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer__sides footer__sides--container">
+        <div class="footer__sides--left">
+          <?php include("images/points-01.svg"); ?>
+        </div>
+        <div class="footer__sides--right">
+          <?php include("images/points-02.svg"); ?>
+        </div>
+      </div>
+
+      <hgroup>
+        <h3><b>¿Te quedaron dudas?</b></h3>
+        <p>Contactános por el medio que prefieras</p>
+      </hgroup>
+
+      <div class="footer__info__btns">
+        <a href="#" class="btn btn--primary btn--filled btn--filled--green"><i class="icon icon-whatsapp" ></i> <b>Chateá con nosotros</b></a>
+        <a href="#" class="btn btn--outlined btn--outlined--green"><b>info@spiral.com</b></a>
+      </div>
     </div>
   </div>
-  <div class="container">
-    <span class="legales">
-      Información financiera: Préstamos personales online desde $1.000 a $15.000. Plazo mínimo: 60 días. Plazo máximo: 120 días. Tasa Nominal Anual (TNA): 440%.Tasa Efectiva Anual (TEA): 1.239%. Ejemplo: Para un préstamo de $10.000 en 3 cuotas. Valor total de la cuota $6.667. Total a devolver en 3 meses: $20.001. El monto de la cuota incluye: capital, intereses e impuestos
-    </span>
+
+  <!-- links -->
+  <div class="section footer__links">
+    <div class="container">
+      <div class="footer__links__container">
+        <div class="logo">
+          <a href="/"><?php include("./images/logo-spiral.svg"); ?></a>
+          <span>info@spiral.com</span>
+        </div>
+
+        <div class="socials hidden-xs">
+          <a href="#">
+            <i class="icon icon-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="icon icon-yt"></i>
+          </a>
+          <a href="#">
+            <i class="icon icon-insta"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__links__container">
+        <div class="separator visible-xs"></div>
+        <hgroup><h4>Nosotros</h4></hgroup>
+        <ul class="footer__links--urls">
+          <li>
+            <a href="#"><span>Funcionalidades</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Términos y Condiciones</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Políticas de Privacidad</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__links__container footer__links__container--last">
+
+        <!-- country selector -->
+        <?php include("includes/countrySelector.inc.php"); ?>
+
+        <img src="images/ml-app.png" alt="Mercado Libre - aplicación certificada" />
+
+      </div>
+    </div>
+  </div>
+
+  <!-- copy -->
+  <div class="section footer__copy">
+    <div class="container">
+      <div class="socials visible-flex-xs">
+        <a href="#">
+          <i class="icon icon-linkedin"></i>
+        </a>
+        <a href="#">
+          <i class="icon icon-yt"></i>
+        </a>
+        <a href="#">
+          <i class="icon icon-insta"></i>
+        </a>
+      </div>
+      <span>© 2020 Spiral. Todos los derechos reservados</span>
+    </div>
   </div>
 </footer>

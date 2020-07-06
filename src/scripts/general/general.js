@@ -7,6 +7,7 @@ export default function General() {
         init: () => {
             $(document).ready(function(){
                 spiral.ready();
+                console.log('ready')
                 toolResponsive();
             }); 
         },
@@ -60,6 +61,8 @@ export default function General() {
 
             $elAction.add('.dropdown > li a').on('click', function(event){
                 $body.toggleClass('openMenu');
+
+                console.log('hola')
             });
         }, 
         
