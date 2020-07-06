@@ -41,7 +41,7 @@
                 Ingresar
               </button>
 
-              <a href="#" class="btn btn--link">
+              <a href="recovery.php" class="btn btn--link">
                 <span>
                   Olvide mi contraseña
                 </span>

@@ -24,7 +24,7 @@ export default function General() {
         hideFooterContentOnSection : () => {
             let location = window.location.pathname;
 
-            if ( location.indexOf('login') > 0 ) {
+            if ( location.indexOf('login') > 0 || location.indexOf('recovery') > 0 ) {
                 $('.dudas__info').hide();
             }
         },
