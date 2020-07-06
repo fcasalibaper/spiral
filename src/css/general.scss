@@ -31,10 +31,12 @@
   padding-right: $PADDING_MOBILE;
   flex-direction: column;
 
-  @include upTo(xs) {
+  @include upTo(sm) {
     max-width: $sm;
-    padding-left: $PADDING_SM;
-    padding-right: $PADDING_SM;
+    // padding-left: $PADDING_SM;
+    // padding-right: $PADDING_SM;
+    padding-left: 0;
+    padding-right: 0;
     flex-direction: row;
   }
   @include upTo(sm) {
@@ -121,6 +123,7 @@
   }
   @include upTo(xs) {
     padding-top: 0;
+    padding-bottom: 1rem;
   }
 
   .container {
@@ -217,6 +220,315 @@
     }
   }
 }
+
+// info section 
+.info {
+  background-color: #f7f7f7;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .container {
+    padding: 0;
+  }
+
+  &__text {
+    display: flex;
+    
+  }
+  p {
+    color: $COLOR_BLACK;
+    padding-right: 4rem;
+    @include fontSize(16px);
+    b {
+      font-weight: $BOLD;
+    }
+  }
+}
+
+// features
+.features {
+  background-color: #f5fafd;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+
+  @include upTo(xs) {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+  
+  header {
+    h2 {
+      color: #333;
+      font-weight: $LIGHT;
+      @include fontSize(30px);
+      
+      @include upTo(xs) {
+        @include fontSize(34px);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__elements {
+    display: flex;
+
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 3.7rem;
+
+      @include upTo(xs) {
+        margin-top: 4rem;
+      }
+      
+      li {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        margin-bottom: 2rem;
+
+        @include upTo(xs) {
+          align-items: center;
+          width: 50%;
+          margin-bottom: 1rem;
+        }
+
+        i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 6.917rem;
+          height: 6.917rem;
+          min-width: 6.917rem;
+          min-height: 6.917rem;
+          color: $COLOR_CELESTE;
+          border-radius: 0.833rem;
+          border: solid 1px #e2e4e8;
+          background-color: #ffffff;
+          padding: 0.833rem;
+          @include fontSize(50px);
+        }
+
+        hgroup {
+          padding-left: 2rem;
+          padding-right: 2rem;
+
+          h4 {
+            @include fontSize(16px);
+            line-height: 1;
+            color: $COLOR_BLACK;
+            font-weight: $REGULAR;
+            margin-bottom: 1rem;
+
+            @include upTo(xs) {
+              @include fontSize(18px);
+            }
+          }
+
+          p {
+            @include fontSize(14px);
+            font-weight: $REGULAR;
+            line-height: 1;
+            color: #7c8087;
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-left: 4rem;
+    svg {
+      position: relative;
+      top: -5rem;
+      width: 100%;
+    }
+  }
+
+  
+}
+
+// clients
+.clients {
+  background-color: #fff;
+
+  @include break(xs) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    h2 {
+      font-weight: $REGULAR;
+      color: $COLOR_BLACK;
+      @include fontSize(26px);
+      line-height: 1.23;
+
+      @include upTo(xs) {
+        @include fontSize(30px);
+      }
+    }
+  }
+
+  &__list {
+    @include break(xs) {
+      margin-top: 3rem;
+    }
+    h4 {
+      font-weight: $REGULAR;
+      @include fontSize(18px);
+      color: #7c8087;
+    }
+    figure {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-top: 1.3rem;
+
+      @include upTo(xs) {
+        margin-top: 1rem;
+      }
+
+      img {
+        max-width: 75px;
+        // align-self: flex-start;
+        margin-right: 2rem;
+
+        @include upTo(xs) {
+          max-width: 150px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          max-width: 4rem;
+          @include upTo(xs) {
+            max-width: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Opinions 
+.opiniones {
+  background-color: #f7f7f7;
+  padding-top: 3rem;
+  
+  @include upTo(xs) {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+  }
+
+  header {
+    margin-bottom: 2rem;
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e9f7fe;
+      width: 84px;
+      height: 84px;
+      padding: 1rem;
+      border-radius: 100%;
+      color: $COLOR_BLUE;
+      @include fontSize(26px);
+    }
+
+    h2 {
+      @include fontSize(26px);
+      color: $COLOR_BLACK;
+      margin-top: 2.2rem;
+
+      @include upTo(xs) {
+        margin-top: 4.2rem;
+        @include fontSize(36px);
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 3.3rem;
+    margin-bottom: 1rem;
+
+    @include break(xs) {
+      width: 100vw;
+    }
+
+    .wrapper {
+      position: relative;
+      display: flex;
+      width: 100%;
+
+      @include break(xs) {
+        overflow-x: scroll;
+        width: 100vw;
+        left: -$PADDING_MOBILE
+      }
+    }
+  }
+
+  .card {
+    border-radius: 10px;
+    border: solid 1px #e2e4e8;
+    background-color: #ffffff;
+    max-width: 29.167rem;
+    width: 100%;
+    margin-right: 3rem;
+    padding: 2.25rem;
+
+    @include break(xs) {
+      min-width: 25rem;
+      margin-right: 0;
+      margin-left: 3rem;
+    }
+
+    &__img {
+      border-radius: 100%;
+      width: 4rem;
+      height: 4rem;
+      box-shadow: inset 0 0.167rem 0.25rem 0 #00000033;
+      background-color: #ececec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    &__text {
+      @include fontSize(13px);
+      font-style: italic;
+      font-weight: $REGULAR;
+      color: $COLOR_BLACK;
+      margin-bottom: 2rem;
+    }
+
+    small {
+      @include fontSize(14px);
+      font-weight: $REGULAR;;
+      color: $COLOR_CELESTE;
+    }
+  }
+}
+
 
 h2 {
   @include fontSize(36px);

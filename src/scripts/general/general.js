@@ -8,7 +8,7 @@ export default function General() {
             $(document).ready(function(){
                 spiral.ready();
                 console.log('ready')
-                toolResponsive();
+                // toolResponsive();
             }); 
         },
 
