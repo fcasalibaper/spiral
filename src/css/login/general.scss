@@ -87,11 +87,11 @@
     justify-content: space-between;
     background-color: #ffffff;
     flex-wrap: wrap;
-    padding: 3rem $PADDING_MOBILE;
+    padding: 1rem $PADDING_MOBILE 3rem $PADDING_MOBILE;
+    box-shadow: 0 2px 4px 0 #0000002e;
     
     @include upTo(xs) {
       border-radius: 4px;
-      box-shadow: 0 2px 4px 0 #0000002e;
       padding: 4.583rem;
     }
   }
@@ -174,7 +174,21 @@
       }
     }
 
+    .box {
+      max-width: 250px;
+      margin: auto;
+    }
+
     &.withOutLine {
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      @include upTo(xs) {
+        padding: 1.3rem 0;
+      }
       &:before {
         display: none;
       }

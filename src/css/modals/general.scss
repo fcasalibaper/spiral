@@ -1,2 +1,29 @@
 .modal {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.5);
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+
+  @include break(xs) {
+    top:0;
+  }
+
+  &__content {
+    width: 896px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+
+    @include break(xs) {
+      height: 100%;
+      border-radius: 0;
+    }
+  }
 }

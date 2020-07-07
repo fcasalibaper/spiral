@@ -13,6 +13,12 @@
     @include fontSize(16px);
   }
 
+  &--ingresar {
+    @include upTo(xs) {
+      @include fontSize(14px);
+    }
+  }
+
   &--filled {
     color: #ffffff;
     text-decoration: none;

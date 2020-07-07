@@ -18,13 +18,32 @@ export default function General() {
             spiral.openModalIngresar();
             spiral.dropDown();
             spiral.hideFooterContentOnSection();
-            spiral.checkElement()
+            spiral.checkElement();
+            spiral.getvideo();
+        },
+
+        getvideo : () => {
+            let $btnVideo = $('.video');
+            let rel = $btnVideo.attr('rel');
+            let $modal = $('.modal');
+            let $modalIframe = $('.modal__body').find('iframe');
+            let $body = $('body');
+
+            $btnVideo.on('click', () => {
+                $body.addClass('active--modal');
+                $modalIframe.attr('src', `https://www.youtube.com/embed/${rel}`)
+            });
+
+            $modal.add('.modal__close').on('click', () => {
+                $body.removeClass('active--modal');
+                $modalIframe.attr('src', '')
+            })
         },
 
         hideFooterContentOnSection : () => {
             let location = window.location.pathname;
 
-            if ( location.indexOf('login') > 0 || location.indexOf('recovery') > 0 ) {
+            if ( location.indexOf('login') > 0 || location.indexOf('recovery') > 0 || location.indexOf('ok') > 0 ) {
                 $('.dudas__info').hide();
             }
         },

@@ -15,18 +15,18 @@
 
     <div class="header__menu hidden-xs">
       <ul class="header__menu__list">
-        <li rel="#funcionalidades">
-          <a href="funcionalidades.php">
+        <li rel="#features">
+          <a href="#features">
             Funcionalidades
           </a>
         </li>
-        <li rel="#clientes">
-          <a href="clientes.php">
+        <li rel="#clients">
+          <a href="#clients">
             Clientes
           </a>
         </li>
-        <li rel="#contacto">
-          <a href="contacto.php">Contacto</a>
+        <li rel="#dudas">
+          <a href="#dudas">Contacto</a>
         </li>
       </ul>
       
@@ -55,15 +55,14 @@
 
 
       <ul class="headerList__mobile__section headerList__mobile__section--first">
-        <li><a href="funcionalidades.php">Funcionalidades</a></li>
-        <li><a href="clientes.php">Clientes</a></li>
-        <li><a href="contacto.php">Contacto</a></li>
+        <li><a href="#features">Funcionalidades</a></li>
+        <li><a href="#clients">Clientes</a></li>
+        <li><a href="#dudas">Contacto</a></li>
       </ul>
 
       <aside class="separator"></aside>
 
       <ul class="headerList__mobile__section headerList__mobile__section--secondary">
-        <li><a href="#">Sobre nosotros</a></li>
         <li><a href="terminos-y-condiciones.php">Términos y Condiciones</a></li>
         <li><a href="politicas-de-privacidad.php">Políticas de Privacidad</a></li>
       </ul>

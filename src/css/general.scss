@@ -233,6 +233,10 @@
   &__img {
     position: relative;
 
+    &.video {
+      cursor: pointer;
+    }
+
     @include break(xs) {
       margin-top: 2rem;
     }
@@ -240,6 +244,7 @@
     img.people_working  {
       width: 100%;
       z-index: 1;
+      align-self: flex-start;
     }
     img.bg__mobile {
       position: absolute;
@@ -255,6 +260,10 @@
   background-color: #f7f7f7;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+
+  @include upTo(xs) {
+    align-items: center;
+  }
 
   .container {
     padding: 0;
@@ -277,7 +286,7 @@
 // features
 .features {
   background-color: #f5fafd;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 4rem;
 
   @include upTo(xs) {
@@ -336,7 +345,7 @@
           height: 6.917rem;
           min-width: 6.917rem;
           min-height: 6.917rem;
-          color: $COLOR_CELESTE;
+          color: $COLOR_BLUE;
           border-radius: 0.833rem;
           border: solid 1px #e2e4e8;
           background-color: #ffffff;
@@ -387,8 +396,8 @@
 // clients
 .clients {
   background-color: #fff;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   @include break(xs) {
     padding-top: 3rem;
@@ -436,7 +445,7 @@
       }
 
       img {
-        max-width: 75px;
+        max-width: 100px;
         // align-self: flex-start;
         margin-right: 2rem;
 
@@ -529,7 +538,7 @@
     @include break(xs) {
       min-width: 25rem;
       margin-right: 0;
-      margin-left: 3rem;
+      margin-left: $PADDING_MOBILE;
     }
 
     &__img {

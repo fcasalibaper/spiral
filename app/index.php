@@ -27,14 +27,24 @@
             </div>
           </hgroup>
         </div>
+
+        <!-- SIN VIDEO -- comentar -->
         <div class="col-sm-6 hero__img hidden-xs">
           <?php include("images/img-header-sinvideo.svg"); ?>
         </div>
         <div class="col-xs-12 hero__img visible-xs">
           <img class="people_working" src="images/img-header-sinvideo-mobile.png" />
           <img class="bg__mobile" src="images/home-bg-mobile.png" />
-          
         </div>
+
+        <!-- CON VIDEO -- descomentar -->
+        <!-- <div class="col-sm-6 hero__img video hidden-xs" style="position: relative; transform: translateY(33%);" rel="pAFae9yasG0">
+          <?php include("images/home-video-img.svg"); ?>
+        </div>
+        <div class="col-xs-12 hero__img video visible-xs" rel="pAFae9yasG0">
+          <img class="people_working" src="images/box-video.png" />
+          <img class="bg__mobile" src="images/home-bg-mobile.png" />
+        </div> -->
       </div>
     </section>
 
@@ -51,7 +61,7 @@
       </div>
     </aside>
 
-    <section class="section features">
+    <section id="features" class="section features">
       <div class="container">
         <header>
           <h2>
@@ -60,7 +70,7 @@
           </h2>
         </header>
         <div class="features__wrapper">
-          <div class="col-xs-12 col-sm-7 features__elements">
+          <div class="col-xs-12 col-sm-8 features__elements">
             <ul class="features__elements__list">
               <li>
                 <i class="icon icon-eye"></i>
@@ -106,14 +116,14 @@
               </li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-5 features__img hidden-xs">
+          <div class="col-xs-12 col-sm-4 features__img hidden-xs">
             <img src="images/home-img.png"  />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section clients">
+    <section id="clients" class="section clients">
       <div class="container">
         <div class="col-xs-12 col-sm-6 clients__text">
           <h2>
@@ -133,7 +143,7 @@
       </div>
     </section>
 
-    <section class="section opiniones">
+    <section id="opiniones" class="section opiniones">
       <div class="container">
         <header>
           <i class="icon icon-heart"></i>

@@ -1,7 +1,12 @@
 .modal {
-  &-dialog {
-  }
-  
-  &-content {
+  &__body {
+    margin-top: 1rem;
+
+    @include break(xs) {
+      height: 100%;
+      iframe {
+        height: 95%;
+      }
+    }
   }
 }

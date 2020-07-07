@@ -1,6 +1,6 @@
 <footer class="footer">
   <!-- info -->
-  <div class="dudas__info">
+  <div class="dudas__info" id="dudas">
 
     <div class="dudas__sides">
       <div class="dudas__sides--left">
@@ -98,3 +98,6 @@
     </div>
   </div>
 </footer>
+
+<?php include("includes/modal.inc.php"); ?>
+
