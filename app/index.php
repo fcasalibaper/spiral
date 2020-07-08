@@ -38,13 +38,14 @@
         </div>
 
         <!-- CON VIDEO -- descomentar -->
-        <!-- <div class="col-sm-6 hero__img video hidden-xs" style="position: relative; transform: translateY(33%);" rel="pAFae9yasG0">
+        <?php /*  <div class="col-sm-6 hero__img video hidden-xs" style="position: relative; transform: translateY(33%);" rel="pAFae9yasG0">
           <?php include("images/home-video-img.svg"); ?>
         </div>
         <div class="col-xs-12 hero__img video visible-xs" rel="pAFae9yasG0">
           <img class="people_working" src="images/box-video.png" />
           <img class="bg__mobile" src="images/home-bg-mobile.png" />
-        </div> -->
+        </div>
+        */?>
       </div>
     </section>
 
