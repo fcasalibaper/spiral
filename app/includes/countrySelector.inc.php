@@ -1,10 +1,11 @@
 <div class="countrySelector">
   <i class="icon icon-globe"></i>
-  <select>
-    <option value="Brasil">Brasil</option>
-    <option value="México">México </option>
-    <option value="Chile">Chile</option>
-    <option value="Colombia">Colombia</option>
-    <option value="Uruguay">Uruguay</option>
-  </select>
+  <span></span>
+  <ul class="list">
+    <li><a href="#Brasil">Brasil</a></li>
+    <li><a href="#Mexico ">México </a></li>
+    <li><a href="#Chile">Chile</a></li>
+    <li><a href="#Colombia">Colombia</a></li>
+    <li><a href="#Uruguay">Uruguay</a></li>
+  </ul>
 </div>

@@ -137,7 +137,7 @@
           <figure>
             <img src="images/fravega.jpg" alt="Frávega" />
             <img src="images/stanley-black-decker.png" alt="stanley black & decker" />
-            <img src="images/mabe.png" alt="mabe" />
+            <img src="images/mabe1.png" alt="mabe" />
           </figure>
         </div>
       </div>

@@ -20,6 +20,55 @@ export default function General() {
             spiral.hideFooterContentOnSection();
             spiral.checkElement();
             spiral.getvideo();
+            spiral.countrySelector.init();
+        },
+
+        countrySelector : {
+            init: () => {
+                spiral.countrySelector.openSelector();
+                spiral.countrySelector.clickCountry();
+                spiral.countrySelector.route();
+            },
+            openSelector:  () => {
+                const $countrySelector = $('.countrySelector');
+
+                $countrySelector.on('click', function() {
+                    $(this).toggleClass('active');
+                })
+
+                $countrySelector.mouseleave( function() {
+                    if ($countrySelector.hasClass('active')) {
+                        $(this).toggleClass('active');
+                    }
+                })
+            },
+            clickCountry : () => {
+                const $countrySelector = $('.countrySelector');
+                const $ulSelector = $countrySelector.find('.list');
+                // const $nameDisplay = $countrySelector.find('span');
+                
+                $ulSelector.find('li').on('click', function(e) {
+                    // e.preventDefault();
+                    const $name = $(this).find('a').text();
+                    spiral.countrySelector.countryDisplay($name)
+                })
+
+            },
+            countryDisplay: (name) => {
+                const $countrySelector = $('.countrySelector');
+                const $nameDisplay = $countrySelector.find('span');
+                $nameDisplay.text(name);
+            },
+            route: (href) => {
+                let hash = window.location.hash;
+
+                if ( hash ) {
+                    let hashWithOutNum = hash.replace('#', '');
+                    spiral.countrySelector.countryDisplay(hashWithOutNum);
+                } else {
+                    spiral.countrySelector.countryDisplay('Argentina')
+                }
+            }
         },
 
         getvideo : () => {

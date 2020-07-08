@@ -1,0 +1,85 @@
+// countrySelector
+.countrySelector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 30px;
+  max-width: 123px;
+  z-index: 9;
+
+  &.active {
+    ul {
+      display: flex;
+    }
+  }
+
+  i {
+    color: #a2a7ae;
+    @include fontSize(20px);
+  }
+
+  &:after {
+    font-family: '#{$icomoon-font-family}' !important;
+    content: $icon-chevron-down;
+    color: $COLOR_GREY;
+    @include fontSize(5px);
+    margin-left: 1rem;
+  }
+
+  span {
+    @include fontSize(14px);
+    color: $COLOR_GREY;
+    margin-left: 1.2rem;
+    width: 5.2rem;
+  }
+  
+  ul {
+    display: none;
+    flex-direction: column;
+    border:0;
+    position: absolute;
+    font-family: $FONT_FAMILY;
+    font-weight: $REGULAR;
+    @include fontSize(14px);
+    box-shadow: 0 2px 2px 0 #00000033;
+    border: solid 1px #eeeeee;
+    background-color: #ffffff;
+    border-radius: 2px;
+    padding: 1.11rem 0;
+    width: 100%;
+    min-width: 12.5rem;
+    top: 2.45rem;
+
+    li {
+      padding: 5px 0.9rem;
+      &:hover {
+        background-color: rgba(black, 0.1);
+      }
+      a {
+        @include fontSize(14px);
+        color: $COLOR_GREY;
+        border: 0;
+        text-decoration: none;
+
+        &:hover,
+        &:visited,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.countrySelector__wrapper {
+  &--light {
+    .countrySelector {
+      select,
+      select option,
+      span,
+      &:after {
+        color: white
+      }
+    }
+  }
+}

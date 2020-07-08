@@ -50,57 +50,6 @@
   }
 }
 
-// countrySelector
-.countrySelector {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 123px;
-
-  i {
-    color: #a2a7ae;
-    @include fontSize(20px);
-  }
-
-  &:after {
-    font-family: '#{$icomoon-font-family}' !important;
-    content: $icon-chevron-down;
-    color: #0a1036;
-    @include fontSize(5px);
-    margin-left: 1rem;
-  }
-  
-  select {
-    position: relative;
-    margin-left: .5rem;
-    border: 0;
-    font-family: $FONT_FAMILY;
-    font-weight: $REGULAR;
-    background-color: transparent;
-    @include fontSize(14px);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-
-    option {
-      @include fontSize(14px);
-      color: #0a1036;
-    }
-  }
-}
-.countrySelector__wrapper {
-  &--light {
-    .countrySelector {
-      select,
-      select option,
-      &:after {
-        color: white
-      }
-    }
-  }
-}
 .separator {
   height: 1px;
   width: 100%;
@@ -450,15 +399,15 @@
         margin-right: 2rem;
 
         @include upTo(xs) {
-          max-width: 150px;
+          max-width: 120px;
         }
 
         &:last-child {
           margin-right: 0;
-          max-width: 4rem;
-          @include upTo(xs) {
-            max-width: 4rem;
-          }
+          // max-width: 4rem;
+          // @include upTo(xs) {
+          //   max-width: 4rem;
+          // }
         }
       }
     }
