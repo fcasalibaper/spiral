@@ -127,7 +127,6 @@
       @include fontSize(30px);
       @include upTo(xs) {
         line-height: 1.3;
-        @include fontSize(34px);
       }
     }
     small {
@@ -136,10 +135,6 @@
       @include fontSize(16px);
       font-weight: $REGULAR;
       color: $COLOR_BLACK;
-
-      @include upTo(xs) {
-        @include fontSize(20px);
-      }
 
       span {
         color: $COLOR_BLUE;
@@ -200,6 +195,219 @@
       top: -3.8rem;
       right: -$PADDING_MOBILE;
       z-index: 0;
+    }
+  }
+
+  // Mercado pago
+  &--mp {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @include upTo(xs) {
+      padding-top: 2.3rem;
+      padding-bottom: 2.3rem;
+    }
+
+    .btns {
+      @include break(xs) {
+        margin-top: 2rem;
+        flex-direction: column;
+        a {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  // prices
+  &__prices {
+    position: relative;
+
+    // bg img
+    figure {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 400px;
+    }
+
+    &__img {
+      &--oval {
+        width: 299px;
+        position: absolute;
+        align-self: flex-end;
+        z-index: 1;
+        
+        &--1 {
+          top: 26%;
+          left: -18.5%;
+        }
+        &--2 {
+          bottom: -4%;
+          right: -2vw;
+        }
+      }
+      &--dots {
+        width: 163px;
+        position: absolute;
+        align-self: flex-end;
+        left: -5.2vw;
+        top: 13%;
+        z-index: 2;
+      }
+    }
+
+    // card
+    .hero__card {
+      position: relative;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      
+      @include break(xs) {
+        margin-top: 2.6rem;
+      }
+
+      @include upTo(xs) {
+        padding-right: 2rem;
+      }
+      
+      &__wrapper {
+        z-index: 3;
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 0 30px 0 #00000019;
+        background-color: #ffffff;
+        padding: 20px;
+        @include upTo(xs) {
+          max-width: 400px;
+        }
+      }
+
+      // tabs
+      &__tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 3rem;
+
+        li {
+          @include fontSize(14px);
+          font-weight: $REGULAR;
+          line-height: 1;
+          color: $COLOR_BLUE;
+          border-radius: 4px;
+          border: solid 1px #1980ff;
+          background-color: #ffffff;
+          text-align: center;
+          position: relative;
+          padding: 12px;
+          cursor: pointer;
+          transition: $TRANSITION;
+
+          &:nth-child(1) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          &:nth-child(2) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+
+          span {
+            position: absolute;
+            width: 65px;
+            @include fontSize(14px);
+            font-weight: $BOLD;
+            line-height: 1;
+            color: $COLOR_BLUE;
+            white-space: nowrap;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &.active {
+            color: white;
+            background-color: $COLOR_BLUE;
+          }
+        }
+      }
+
+      // content tabs
+      &__content {
+        display: flex;
+        position: relative;
+        border-bottom: solid 1px #e2e4e8;
+
+        .hero__card__element {
+          display: none;
+          width: 100%;
+
+          &.active {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          // title
+          h4 {
+            @include fontSize(14px);
+            font-weight: $BOLD;
+            line-height: 1;
+            color: $COLOR_BLACK;
+            margin: 1rem 0 1.5rem;
+          }
+
+          // list prices
+          ul {
+            width: 100%;
+            li {
+              width: 100%;
+              display: flex;
+              flex-direction: row
+              ;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 2.3rem;
+
+              span {
+                @include fontSize(14px);
+                font-weight: $REGULAR;
+                line-height: 1;
+                color: $COLOR_BLACK;
+
+                b {
+                  @include fontSize(18px);
+                  font-weight: $BOLD;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // card footer
+      &__footer {
+        display: flex;
+        flex-direction: column
+        ;
+        align-items: center;
+        margin-top: 1.7rem;
+        span {
+          @include fontSize(10px);
+          font-weight: $REGULAR;
+          line-height: 2;
+          color: $COLOR_BLACK;
+          margin-bottom: 1.7rem;
+          text-align: center;
+        }
+        img {
+          max-width: 114px;
+        }
+      }
     }
   }
 }

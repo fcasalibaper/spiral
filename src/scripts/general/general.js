@@ -21,6 +21,7 @@ export default function General() {
             spiral.checkElement();
             spiral.getvideo();
             spiral.countrySelector.init();
+            spiral.tabsMercadoPago();
         },
 
         countrySelector : {
@@ -69,6 +70,22 @@ export default function General() {
                     spiral.countrySelector.countryDisplay('Argentina')
                 }
             }
+        },
+
+        tabsMercadoPago : () => {
+            const $tabs = $('.hero__card__tabs');
+            const $content = $('.hero__card__content');
+            const $element = $content.find('.hero__card__element');
+
+            $tabs.on('click', 'li', function() {
+                const rel = $(this).attr('rel');
+
+                $tabs.find('li').removeClass('active');
+                $(this).addClass('active');
+
+                $content.find('.hero__card__element').removeClass('active');
+                $content.find(`#${rel}`).addClass('active');
+            })
         },
 
         getvideo : () => {

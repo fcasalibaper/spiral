@@ -29,23 +29,23 @@
         </div>
 
         <!-- SIN VIDEO -- comentar -->
-        <div class="col-sm-6 hero__img hidden-xs">
+        <?php /* <!<div class="col-sm-6 hero__img hidden-xs">
           <?php include("images/img-header-sinvideo.svg"); ?>
         </div>
         <div class="col-xs-12 hero__img visible-xs">
           <img class="people_working" src="images/img-header-sinvideo-mobile.png" />
           <img class="bg__mobile" src="images/home-bg-mobile.png" />
-        </div>
+        </div> */ ?>
 
         <!-- CON VIDEO -- descomentar -->
-        <?php /*  <div class="col-sm-6 hero__img video hidden-xs" style="position: relative; transform: translateY(33%);" rel="pAFae9yasG0">
-          <?php include("images/home-video-img.svg"); ?>
+        <div class="col-sm-6 hero__img video hidden-xs" style="position: relative; transform: translateY(5%);" rel="pAFae9yasG0">
+          <img src="images/img-home-video.png" />
         </div>
         <div class="col-xs-12 hero__img video visible-xs" rel="pAFae9yasG0">
-          <img class="people_working" src="images/box-video.png" />
+          <img class="people_working" src="images/img-home-video-mobile.png" />
           <img class="bg__mobile" src="images/home-bg-mobile.png" />
         </div>
-        */?>
+        
       </div>
     </section>
 

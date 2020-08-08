@@ -15,37 +15,28 @@
             <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
-        <filter x="-79.8%" y="-141.5%" width="259.6%" height="383.0%" filterUnits="objectBoundingBox" id="filter-7">
-            <feOffset dx="24" dy="48" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="47.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.192908654   0 0 0 0 0.28125  0 0 0 0.301488904 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-        <rect id="path-8" x="27.4497059" y="0" width="288.793781" height="188.716728" rx="9.26640032"></rect>
-        <filter x="-0.2%" y="-0.3%" width="100.3%" height="101.1%" filterUnits="objectBoundingBox" id="filter-9">
+        <rect id="path-7" x="27.4497059" y="0" width="288.793781" height="188.716728" rx="9.26640032"></rect>
+        <filter x="-0.2%" y="-0.3%" width="100.3%" height="101.1%" filterUnits="objectBoundingBox" id="filter-8">
             <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
-        <filter x="-0.3%" y="-0.5%" width="100.7%" height="101.6%" filterUnits="objectBoundingBox" id="filter-10">
+        <filter x="-0.3%" y="-0.5%" width="100.7%" height="101.6%" filterUnits="objectBoundingBox" id="filter-9">
             <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
             <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
             <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
             <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
         </filter>
-        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-11">
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-10">
             <stop stop-color="#BCBDBF" offset="0%"></stop>
             <stop stop-color="#D8D8DF" offset="9.75964605%"></stop>
             <stop stop-color="#D8D8DF" offset="88.8213489%"></stop>
             <stop stop-color="#ADAABD" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-12">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-11">
             <stop stop-color="#FFFFFF" offset="0%"></stop>
             <stop stop-color="#CDCBD5" offset="100%"></stop>
         </linearGradient>
-        <rect id="path-13" x="0" y="3.17450995e-17" width="260.772206" height="162.41076"></rect>
+        <rect id="path-12" x="0" y="3.17450995e-17" width="260.772206" height="162.41076"></rect>
     </defs>
     <g id="home-video-img" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="img-header" transform="translate(2.000000, 0.000000)">
@@ -77,27 +68,27 @@
                     <path d="M21.0752572,3.72947576 C21.0390087,3.57962378 21.0033961,3.42913952 20.9671476,3.27928755 C21.0065758,3.42344894 21.04664,3.56824262 21.0854323,3.71366859 C21.0854323,3.71493316 21.0752572,3.72947576 21.0752572,3.72947576" id="Fill-7"></path>
                 </g>
             </g>
-            <g id="macbook-air" filter="url(#filter-7)" transform="translate(7.000000, 175.219076)">
+            <g id="macbook-air" transform="translate(7.000000, 175.219076)">
                 <g id="case">
                     <g id="screen">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-8"></use>
-                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-8"></use>
-                        <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-8"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-7"></use>
                     </g>
                     <rect id="front" fill="#FFFFFF" x="0" y="187.001121" width="343.121323" height="2.28747549"></rect>
-                    <path d="M141.251611,187.001121 L202.441581,187.001121 L202.441581,187.858925 C202.441581,188.332676 202.050834,188.716728 201.57658,188.716728 L142.116612,188.716728 C141.638885,188.716728 141.251611,188.335979 141.251611,187.858925 L141.251611,187.001121 Z" id="notch" fill-opacity="0.5" fill="url(#linearGradient-11)"></path>
-                    <path d="M54.8994118,193.291679 C8.24870937,193.291679 0,189.288597 0,189.288597 L0,189.288597 L172.132531,188.716728 L343.121323,189.288597 C343.121323,189.288597 334.894582,193.291679 288.221912,193.291679 Z" id="bottom" fill="url(#linearGradient-12)"></path>
+                    <path d="M141.251611,187.001121 L202.441581,187.001121 L202.441581,187.858925 C202.441581,188.332676 202.050834,188.716728 201.57658,188.716728 L142.116612,188.716728 C141.638885,188.716728 141.251611,188.335979 141.251611,187.858925 L141.251611,187.001121 Z" id="notch" fill-opacity="0.5" fill="url(#linearGradient-10)"></path>
+                    <path d="M54.8994118,193.291679 C8.24870937,193.291679 0,189.288597 0,189.288597 L0,189.288597 L172.132531,188.716728 L343.121323,189.288597 C343.121323,189.288597 334.894582,193.291679 288.221912,193.291679 Z" id="bottom" fill="url(#linearGradient-11)"></path>
                 </g>
                 <g id="screen" transform="translate(41.174559, 12.581115)">
-                    <mask id="mask-14" fill="white">
-                        <use xlink:href="#path-13"></use>
+                    <mask id="mask-13" fill="white">
+                        <use xlink:href="#path-12"></use>
                     </mask>
-                    <use id="Mask" fill="#C1E4F4" xlink:href="#path-13"></use>
-                    <circle id="Oval" fill="#ADD5E8" fill-rule="nonzero" mask="url(#mask-14)" cx="49.7525919" cy="49.7525919" r="10.8655086"></circle>
-                    <path d="M42.3182966,70.9117402 L106.36761,70.9117402 C108.262617,70.9117402 109.798824,72.4479467 109.798824,74.3429534 C109.798824,76.2379602 108.262617,77.7741667 106.36761,77.7741667 L42.3182966,77.7741667 C40.4232898,77.7741667 38.8870833,76.2379602 38.8870833,74.3429534 C38.8870833,72.4479467 40.4232898,70.9117402 42.3182966,70.9117402 Z" id="Rectangle" fill="#E2F6FF" fill-rule="nonzero" mask="url(#mask-14)"></path>
-                    <path d="M42.3182966,83.4928554 L115.517512,83.4928554 C117.412519,83.4928554 118.948725,85.0290619 118.948725,86.9240686 C118.948725,88.8190754 117.412519,90.3552818 115.517512,90.3552818 L42.3182966,90.3552818 C40.4232898,90.3552818 38.8870833,88.8190754 38.8870833,86.9240686 C38.8870833,85.0290619 40.4232898,83.4928554 42.3182966,83.4928554 Z" id="Rectangle" fill="#E2F6FF" fill-rule="nonzero" mask="url(#mask-14)"></path>
-                    <path d="M46.8932475,102.936397 L78.9179044,102.936397 C83.3395868,102.936397 86.9240686,106.520879 86.9240686,110.942561 C86.9240686,115.364244 83.3395868,118.948725 78.9179044,118.948725 L46.8932475,118.948725 C42.4715651,118.948725 38.8870833,115.364244 38.8870833,110.942561 C38.8870833,106.520879 42.4715651,102.936397 46.8932475,102.936397 Z" id="Rectangle" fill="#44AFE0" fill-rule="nonzero" mask="url(#mask-14)"></path>
-                    <path d="M167.731916,37.7433456 L213.132753,37.7433456 C217.36925,37.7433456 218.905506,38.1844529 220.454306,39.0127602 C222.003106,39.8410676 223.218614,41.0565749 224.046921,42.605375 C224.875228,44.154175 225.316336,45.6904313 225.316336,49.9269285 L225.316336,113.627569 C225.316336,117.864066 224.875228,119.400322 224.046921,120.949123 C223.218614,122.497923 222.003106,123.71343 220.454306,124.541737 C218.905506,125.370045 217.36925,125.811152 213.132753,125.811152 L167.731916,125.811152 C163.495419,125.811152 161.959163,125.370045 160.410363,124.541737 C158.861563,123.71343 157.646055,122.497923 156.817748,120.949123 C155.989441,119.400322 155.548333,117.864066 155.548333,113.627569 L155.548333,49.9269285 C155.548333,45.6904313 155.989441,44.154175 156.817748,42.605375 C157.646055,41.0565749 158.861563,39.8410676 160.410363,39.0127602 C161.959163,38.1844529 163.495419,37.7433456 167.731916,37.7433456 Z" id="Rectangle" fill="#ADD5E8" fill-rule="nonzero" mask="url(#mask-14)"></path>
+                    <use id="Mask" fill="#C1E4F4" xlink:href="#path-12"></use>
+                    <circle id="Oval" fill="#ADD5E8" fill-rule="nonzero" mask="url(#mask-13)" cx="49.7525919" cy="49.7525919" r="10.8655086"></circle>
+                    <path d="M42.3182966,70.9117402 L106.36761,70.9117402 C108.262617,70.9117402 109.798824,72.4479467 109.798824,74.3429534 C109.798824,76.2379602 108.262617,77.7741667 106.36761,77.7741667 L42.3182966,77.7741667 C40.4232898,77.7741667 38.8870833,76.2379602 38.8870833,74.3429534 C38.8870833,72.4479467 40.4232898,70.9117402 42.3182966,70.9117402 Z" id="Rectangle" fill="#E2F6FF" fill-rule="nonzero" mask="url(#mask-13)"></path>
+                    <path d="M42.3182966,83.4928554 L115.517512,83.4928554 C117.412519,83.4928554 118.948725,85.0290619 118.948725,86.9240686 C118.948725,88.8190754 117.412519,90.3552818 115.517512,90.3552818 L42.3182966,90.3552818 C40.4232898,90.3552818 38.8870833,88.8190754 38.8870833,86.9240686 C38.8870833,85.0290619 40.4232898,83.4928554 42.3182966,83.4928554 Z" id="Rectangle" fill="#E2F6FF" fill-rule="nonzero" mask="url(#mask-13)"></path>
+                    <path d="M46.8932475,102.936397 L78.9179044,102.936397 C83.3395868,102.936397 86.9240686,106.520879 86.9240686,110.942561 C86.9240686,115.364244 83.3395868,118.948725 78.9179044,118.948725 L46.8932475,118.948725 C42.4715651,118.948725 38.8870833,115.364244 38.8870833,110.942561 C38.8870833,106.520879 42.4715651,102.936397 46.8932475,102.936397 Z" id="Rectangle" fill="#44AFE0" fill-rule="nonzero" mask="url(#mask-13)"></path>
+                    <path d="M167.731916,37.7433456 L213.132753,37.7433456 C217.36925,37.7433456 218.905506,38.1844529 220.454306,39.0127602 C222.003106,39.8410676 223.218614,41.0565749 224.046921,42.605375 C224.875228,44.154175 225.316336,45.6904313 225.316336,49.9269285 L225.316336,113.627569 C225.316336,117.864066 224.875228,119.400322 224.046921,120.949123 C223.218614,122.497923 222.003106,123.71343 220.454306,124.541737 C218.905506,125.370045 217.36925,125.811152 213.132753,125.811152 L167.731916,125.811152 C163.495419,125.811152 161.959163,125.370045 160.410363,124.541737 C158.861563,123.71343 157.646055,122.497923 156.817748,120.949123 C155.989441,119.400322 155.548333,117.864066 155.548333,113.627569 L155.548333,49.9269285 C155.548333,45.6904313 155.989441,44.154175 156.817748,42.605375 C157.646055,41.0565749 158.861563,39.8410676 160.410363,39.0127602 C161.959163,38.1844529 163.495419,37.7433456 167.731916,37.7433456 Z" id="Rectangle" fill="#ADD5E8" fill-rule="nonzero" mask="url(#mask-13)"></path>
                 </g>
             </g>
         </g>
