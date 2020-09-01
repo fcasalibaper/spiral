@@ -1,0 +1,984 @@
+.cFull {
+  overflow: hidden;
+
+  @include break(xs) {
+    padding-top: $HEIGHT_MENU_MOBILE;
+  }
+}
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+  
+  @include upTo(xs) {
+    padding: 2rem 0 4rem;
+
+    &--noPadding {
+      padding: 0;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-left: $PADDING_MOBILE;
+  padding-right: $PADDING_MOBILE;
+  flex-direction: column;
+
+  @include upTo(sm) {
+    max-width: $sm;
+    // padding-left: $PADDING_SM;
+    // padding-right: $PADDING_SM;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+  }
+  @include upTo(sm) {
+    max-width: $md;
+  }
+  @include upTo(md) {
+    max-width: $lg;
+  }
+  @include upTo(lg) {
+    max-width: $xl;
+  }
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  background-color: #1d293f;
+}
+
+.socials {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include break(xs) {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  a {
+    text-decoration: none;
+    padding: 1rem;
+    border: solid 1px #e2e4e8;
+    border-radius: 100%;
+    height: 4rem;
+    width:  4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.667rem;
+
+    i {
+      color: $COLOR_VERDE;
+      @include fontSize(16px);
+    }
+  }
+}
+
+// home
+.hero {
+  padding-top: 2.67rem;
+  @include break(xs) {
+    padding-bottom: 7.20rem;
+  }
+  @include upTo(xs) {
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    
+    @include upTo(xs) {
+      padding: 0;
+    }
+  }
+
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    h2,
+    small {
+      color: $COLOR_BLACK;
+      
+      b {
+        color: $COLOR_BLUE;
+      }
+    }
+
+    h2 {
+      font-weight: $REGULAR;
+      line-height: 1.2;
+      @include fontSize(30px);
+      @include upTo(xs) {
+        line-height: 1.3;
+      }
+    }
+    small {
+      margin-top: 2.2rem;
+      line-height: 1.4;
+      @include fontSize(16px);
+      font-weight: $REGULAR;
+      color: $COLOR_BLACK;
+
+      span {
+        color: $COLOR_BLUE;
+      }
+    }
+
+  }
+  
+  .btns {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    margin-top: 3.4rem;
+    z-index: 1;
+
+    a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      @include fontSize(14px);
+      
+      @include break(xs) {
+        height: 50px;
+      }
+
+      @include upTo(xs) {
+        max-width: 16.083rem;
+      }
+    }
+    p {
+      @include fontSize(14px);
+      margin-left: 2rem;
+      line-height: 1.75;
+      color: $COLOR_BLACK;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    &.video {
+      cursor: pointer;
+    }
+
+    @include break(xs) {
+      margin-top: 2rem;
+    }
+    svg,
+    img.people_working  {
+      width: 100%;
+      z-index: 1;
+      align-self: flex-start;
+    }
+    img.bg__mobile {
+      position: absolute;
+      top: -3.8rem;
+      right: -$PADDING_MOBILE;
+      z-index: 0;
+    }
+  }
+
+  // Mercado pago
+  &--mp {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @include upTo(xs) {
+      padding-top: 2.3rem;
+      padding-bottom: 2.3rem;
+    }
+
+    .btns {
+      @include break(xs) {
+        margin-top: 2rem;
+        flex-direction: column;
+        a {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  // prices
+  &__prices {
+    position: relative;
+
+    // bg img
+    figure {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 400px;
+    }
+
+    &__img {
+      &--oval {
+        width: 299px;
+        position: absolute;
+        align-self: flex-end;
+        z-index: 1;
+        
+        &--1 {
+          top: 26%;
+          left: -18.5%;
+        }
+        &--2 {
+          bottom: -4%;
+          right: -2vw;
+        }
+      }
+      &--dots {
+        width: 163px;
+        position: absolute;
+        align-self: flex-end;
+        left: -5.2vw;
+        top: 13%;
+        z-index: 2;
+      }
+    }
+
+    // card
+    .hero__card {
+      position: relative;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      
+      @include break(xs) {
+        margin-top: 2.6rem;
+      }
+
+      @include upTo(xs) {
+        padding-right: 2rem;
+      }
+      
+      &__wrapper {
+        z-index: 3;
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 0 30px 0 #00000019;
+        background-color: #ffffff;
+        padding: 20px;
+        @include upTo(xs) {
+          max-width: 400px;
+        }
+      }
+
+      // tabs
+      &__tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 3rem;
+
+        li {
+          @include fontSize(14px);
+          font-weight: $REGULAR;
+          line-height: 1;
+          color: $COLOR_BLUE;
+          border-radius: 4px;
+          border: solid 1px #1980ff;
+          background-color: #ffffff;
+          text-align: center;
+          position: relative;
+          padding: 12px;
+          cursor: pointer;
+          transition: $TRANSITION;
+
+          &:nth-child(1) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          &:nth-child(2) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+
+          span {
+            position: absolute;
+            width: 65px;
+            @include fontSize(14px);
+            font-weight: $BOLD;
+            line-height: 1;
+            color: $COLOR_BLUE;
+            white-space: nowrap;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &.active {
+            color: white;
+            background-color: $COLOR_BLUE;
+          }
+        }
+      }
+
+      // content tabs
+      &__content {
+        display: flex;
+        position: relative;
+        border-bottom: solid 1px #e2e4e8;
+
+        .hero__card__element {
+          display: none;
+          width: 100%;
+
+          &.active {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          // title
+          h4 {
+            @include fontSize(14px);
+            font-weight: $BOLD;
+            line-height: 1;
+            color: $COLOR_BLACK;
+            margin: 1rem 0 1.5rem;
+          }
+
+          // list prices
+          ul {
+            width: 100%;
+            li {
+              width: 100%;
+              display: flex;
+              flex-direction: row
+              ;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 2.3rem;
+
+              span {
+                @include fontSize(14px);
+                font-weight: $REGULAR;
+                line-height: 1;
+                color: $COLOR_BLACK;
+
+                b {
+                  @include fontSize(18px);
+                  font-weight: $BOLD;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // card footer
+      &__footer {
+        display: flex;
+        flex-direction: column
+        ;
+        align-items: center;
+        margin-top: 1.7rem;
+        span {
+          @include fontSize(10px);
+          font-weight: $REGULAR;
+          line-height: 2;
+          color: $COLOR_BLACK;
+          margin-bottom: 1.7rem;
+          text-align: center;
+        }
+        img {
+          max-width: 114px;
+        }
+      }
+    }
+  }
+}
+
+// info section 
+.info {
+  background-color: #f7f7f7;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @include upTo(xs) {
+    align-items: center;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  &__text {
+    display: flex;
+    
+  }
+  p {
+    color: $COLOR_BLACK;
+    padding-right: 4rem;
+    @include fontSize(14px);
+    b {
+      font-weight: $BOLD;
+    }
+  }
+}
+
+// features
+.features {
+  background-color: #f5fafd;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include upTo(xs) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  
+  header {
+    h2 {
+      color: #333;
+      font-weight: $REGULAR;
+      @include fontSize(30px);
+      
+      @include upTo(xs) {
+        @include fontSize(30px);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__elements {
+    display: flex;
+
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 3.7rem;
+
+      @include upTo(xs) {
+        margin-top: 4rem;
+      }
+      
+      li {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        margin-bottom: 2rem;
+
+        @include upTo(xs) {
+          align-items: center;
+          width: 50%;
+          margin-bottom: 1rem;
+        }
+
+        i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 6.917rem;
+          height: 6.917rem;
+          min-width: 6.917rem;
+          min-height: 6.917rem;
+          color: $COLOR_BLUE;
+          border-radius: 0.833rem;
+          border: solid 1px #e2e4e8;
+          background-color: #ffffff;
+          padding: 0.833rem;
+          @include fontSize(50px);
+        }
+
+        hgroup {
+          padding-left: 2rem;
+          padding-right: 2rem;
+
+          h4 {
+            @include fontSize(14px);
+            line-height: 1;
+            color: $COLOR_BLACK;
+            font-weight: $REGULAR;
+            margin-bottom: 1rem;
+
+            @include upTo(xs) {
+              @include fontSize(16px);
+            }
+          }
+
+          p {
+            @include fontSize(14px);
+            font-weight: $REGULAR;
+            line-height: 1;
+            color: #7c8087;
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-left: 4rem;
+    img {
+      position: relative;
+      top: -5rem;
+      width: 100%;
+    }
+  }
+
+  
+}
+
+// clients
+.clients {
+  background-color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include break(xs) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    h2 {
+      font-weight: $REGULAR;
+      color: $COLOR_BLACK;
+      @include fontSize(26px);
+      line-height: 1.23;
+
+      @include upTo(xs) {
+        @include fontSize(26px);
+      }
+    }
+  }
+
+  &__list {
+    @include break(xs) {
+      margin-top: 3rem;
+    }
+    h4 {
+      font-weight: $REGULAR;
+      @include fontSize(16px);
+      color: #7c8087;
+    }
+    figure {
+      overflow: hidden;
+      width: 100%;
+      max-height: 40px;
+      display: flex;
+      align-items: center;
+      margin-top: 1.3rem;
+
+      @include upTo(xs) {
+        margin-top: 1rem;
+      }
+
+      img {
+        max-width: 100px;
+        // align-self: flex-start;
+        margin-right: 2rem;
+
+        @include upTo(xs) {
+          max-width: 120px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          // max-width: 4rem;
+          // @include upTo(xs) {
+          //   max-width: 4rem;
+          // }
+        }
+      }
+    }
+  }
+
+}
+
+// Opinions 
+.opiniones {
+  background-color: #f7f7f7;
+  padding-top: 3rem;
+  
+  @include upTo(xs) {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+  }
+
+  header {
+    margin-bottom: 2rem;
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e9f7fe;
+      width: 84px;
+      height: 84px;
+      padding: 1rem;
+      border-radius: 100%;
+      color: $COLOR_BLUE;
+      @include fontSize(26px);
+    }
+
+    h2 {
+      @include fontSize(26px);
+      color: $COLOR_BLACK;
+      margin-top: 2.2rem;
+
+      @include upTo(xs) {
+        margin-top: 4.2rem;
+        @include fontSize(30px);
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 3.3rem;
+    margin-bottom: 1rem;
+
+    @include break(xs) {
+      width: 100vw;
+    }
+
+    .wrapper {
+      position: relative;
+      display: flex;
+      width: 100%;
+
+      @include break(xs) {
+        overflow-x: scroll;
+        width: 100vw;
+        left: -$PADDING_MOBILE
+      }
+    }
+  }
+
+  .card {
+    border-radius: 10px;
+    border: solid 1px #e2e4e8;
+    background-color: #ffffff;
+    max-width: 29.167rem;
+    width: 100%;
+    margin-right: 3rem;
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+
+    @include break(xs) {
+      min-width: 25rem;
+      margin-right: 0;
+      margin-left: $PADDING_MOBILE;
+    }
+
+    &__img {
+      border-radius: 100%;
+      width: 4rem;
+      height: 4rem;
+      box-shadow: inset 0 0.167rem 0.25rem 0 #00000033;
+      background-color: #ececec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    &__text {
+      @include fontSize(13px);
+      font-style: italic;
+      font-weight: $REGULAR;
+      color: $COLOR_BLACK;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    small {
+      @include fontSize(14px);
+      font-weight: $REGULAR;;
+      color: $COLOR_CELESTE;
+    }
+  }
+}
+
+// dudas
+.dudas {
+  &__info {
+    @extend .section;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: $COLOR_CELESTE;
+    overflow: hidden;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 6rem 0 5rem !important;
+      z-index: 1;
+
+      @include upTo(xs) {
+        padding: 3rem 0 6rem !important;
+      }
+    }
+
+    hgroup {
+      width: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
+      
+      h3 {
+        text-align: center;
+        @include fontSize(20px);
+        line-height: 1;
+        text-align: center;
+        color: #ffffff;
+
+        @include upTo(xs) {
+          @include fontSize(30px);
+        }
+      }
+      p {
+        text-align: center;
+        color: white;
+        padding: 2rem 0;
+        @include fontSize(14px);
+        text-align: center;
+        color: #ffffff;
+
+        @include upTo(xs) {
+          @include fontSize(16px);
+        }
+      }
+    }
+
+    &__btns {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @include upTo(xs) {
+        flex-direction: row;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem;
+        width: 90%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 1.65rem;
+        height: 48px;
+        @include fontSize(14px);
+
+        @include upTo(xs) {
+          width: auto;
+          margin-bottom: 0;
+        }
+
+        .icon-whatsapp {
+          font-size: 1.313em;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  // images sides
+  &__sides {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+
+    &--container {
+      z-index: -1;
+      .dudas__sides--left,
+      .dudas__sides--right {
+        path {
+          fill: white
+        }
+      }
+
+      .dudas__sides--left {
+        bottom: 0;
+        width: 11.667rem;
+        @include break(xs) {
+          left: 10%;
+        }
+        @include upTo(xs) {
+          width: 15.667rem;
+        }
+        svg {
+          position: absolute;
+          bottom: 0;
+
+          @include break(xs) {
+            bottom: -10%;
+          }
+        }
+      }
+      .dudas__sides--right {
+        top:0;
+        width: 15.667rem;
+
+        @include break(xs) {
+          align-items: flex-start;
+          width: 38%;
+        }
+        svg {
+          position: relative;
+          top: 0;
+
+          @include break(xs) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &--left,
+    &--right {
+      position: absolute;
+      top: 0;
+      height: 100%;
+
+      @include upTo(xs) {
+        width: 166px;
+      }
+    }
+
+    &--left {
+      left: 0;
+      width: 60px;
+      
+      @include upTo(xs) {
+        width: 166px;
+        img {
+          max-width: 40%;
+        }
+      }
+    }
+    &--right {
+      right: 0;
+      width: 100px;
+      text-align: right;
+      
+      @include break(xs) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      img {
+        @include break(xs) {
+          height: 80px;
+        }
+      }
+
+      @include upTo(xs) {
+        width: 216px;
+
+        img {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+.terminos {
+  padding-top: 0;
+  .container {
+    margin: auto;
+  }
+
+  &__title {
+    background-color: #f7f7f7;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 ;
+    
+    @include upTo(xs) {
+      padding: 3rem 0;
+    }
+
+    h3 {
+      color: $COLOR_BLACK;
+      font-weight: $BOLD;
+      @include fontSize(20px);
+      text-align: left;
+      @include upTo(xs) {
+        @include fontSize(24px);
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+    @include upTo(xs) {
+      margin-top: 2.3rem;
+    }
+    p {
+      color: $COLOR_BLACK;
+      font-weight: $REGULAR;
+      @include fontSize(14px);
+
+      strong {
+        font-weight: $REGULAR;
+        @include fontSize(18px);
+      }
+    }
+  }
+}
+
+h2 {
+  @include fontSize(30px);
+  font-weight: $REGULAR;
+  
+  @include upTo(xs) {
+    @include fontSize(34px);
+  }
+}
+b { font-weight: $BOLD; }
